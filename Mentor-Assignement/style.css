@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    justify-content: center; /* Centers the .box horizontally */
+    align-items: center; /* Centers the .box vertically */
+    height: 100vh; /* Ensures the body takes the full viewport height */
+    margin: 0;
+    background-color: black; /* Background color for the body */
+}
+
+.box {
+    display: flex;
+    flex-direction: column; /* Stacks display and keys vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: space-between; /* Adds space between display and keys */
+    height: 550px; /* Adjusted height */
+    width: 300px; /* Adjusted width */
+    border: 4px solid #f65308;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgb(27, 26, 25); /* Background color for the calculator */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    animation: borderAnimation 3s infinite; /* Added animation */
+}
+
+.display {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(243, 235, 229, 0.073);
+    color: white;
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    text-align: right;
+    display: flex;
+    align-items: center; /* Centers text vertically */
+    justify-content: flex-end; /* Aligns text to the right */
+    font-size: 24px; /* Increased font size */
+    animation: borderAnimation 3s infinite; /* Added animation */
+}
+
+.keys {
+    display: flex;
+    flex-wrap: wrap; /* Wraps keys to the next line */
+    justify-content: space-between; /* Adds space between keys */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.keys div {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d30f0f;
+    border: 2px solid grey;
+    color: rgb(10, 9, 9);
+    border-radius: 25px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    animation: borderAnimation 3s infinite; /* Added animation */
+}
+
+.keys div:hover {
+    background-color: #0e0103;
+    color: white;
+}
+
+.keys div:active {
+    background-color: #d9d9d9;
+}
+
+h1 {
+    /* color:linear-gradient(white, red, blue); */
+    color:rgb(236, 236, 7);
+    margin: 50px;
+    text-align: center; /* Center the heading */
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: red;
+    }
+    25% {
+        border-color: rgb(12, 229, 229);
+    }
+    25% {
+        border-color: rgb(84, 12, 229);
+    }
+    50% {
+        border-color: rgb(90, 219, 9);
+    }
+    75% {
+        border-color: rgb(246, 240, 240);
+    }
+    100% {
+        border-color: rgb(0, 255, 85);
+    }
+}
